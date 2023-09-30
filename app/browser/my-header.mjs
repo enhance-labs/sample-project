@@ -1,7 +1,6 @@
-// import CustomElement from '@enhance/custom-element'
 import CustomElement from '@enhance-labs/custom-element'
 
-class MyHeader extends CustomElement {
+export default class MyHeader extends CustomElement {
   constructor() {
     super()
     this.heading = ''

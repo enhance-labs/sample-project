@@ -5,5 +5,8 @@ enhance-app
 prune true
 
 @plugins
-enhance/arc-plugin-enhance
+enhance-labs/arc-plugin-enhance
 enhance/styles-cribsheet
+
+@enhance-elements
+enhance-labs/sample-component sample-component
