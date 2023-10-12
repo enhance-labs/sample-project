@@ -1,3 +1,15 @@
 <my-header heading="From Browser Folder"></my-header>
-<sample-component heading="From node_modules Folder via .arc"></sample-component>
+<slot-header heading="Browser with slot content"><span>unnamed</span><span slot="slot1">Yo-s1</span></slot-header>
+<slot-header heading=" Browser with default"></slot-header>
+<!-- <sample-component heading="From node_modules Folder via .arc"></sample-component> -->
 <script type="module" src="/_public/browser/test-page.mjs"></script>
+<script>
+setTimeout(() => {
+  const body = document.querySelector('body');
+  // add slot-header as appended child using adjacentHTML
+// body.insertAdjacentHTML('beforeend', '<slot-header heading="test"><span slot="slot1">Yo-s1</span>unnamed</slot-header>');
+  body.insertAdjacentHTML('beforeend', 
+    '<slot-header heading="test"><span >slam</span></slot-header>');
+
+}, 1000);
+</script>

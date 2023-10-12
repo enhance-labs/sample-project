@@ -1,6 +1,6 @@
-import CustomElement from '@enhance-labs/custom-element'
+import CustomElement from '../lib/slot-mixin.mjs'
 
-export default class MyHeader extends CustomElement {
+export default class SlotHeader extends CustomElement {
   constructor() {
     super()
     this.heading = ''
@@ -8,7 +8,6 @@ export default class MyHeader extends CustomElement {
   }
 
   render({ html, state }) {
-    // console.log('client render got called')
     const { attrs = {} } = state
     const { heading = 'default' } = attrs
     return html`
@@ -26,6 +25,8 @@ export default class MyHeader extends CustomElement {
         }
       </style>
       <h1>${heading}</h1>
+      <div>Unnamed Slot: <slot>def-unname-slot</slot></div>
+      <div>Slot#1: <slot name="slot1">def-slot1</slot></div>
       <p>Inner Text</p>
     `
   }
@@ -39,6 +40,6 @@ export default class MyHeader extends CustomElement {
   }
 }
 
-export const render = MyHeader.prototype.render;
+export const render = SlotHeader.prototype.render;
 
-customElements.define('my-header', MyHeader)
+customElements.define('slot-header', SlotHeader)
