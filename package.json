@@ -29,7 +29,7 @@
     }
   },
   "dependencies": {
-    "@enhance-labs/arc-plugin-enhance": "^6.2.5-beta.1",
+    "@enhance-labs/arc-plugin-enhance": "^6.2.5-beta.3",
     "@enhance-labs/custom-element": "^1.0.2-beta.4",
     "@enhance-labs/sample-component": "^0.0.6",
     "@enhance/styles-cribsheet": "^0.0.9"
