@@ -26,7 +26,7 @@ export default class MyHeader extends CustomElement {
         }
       </style>
       <h1>${heading}</h1>
-      <p>Inner Text</p>
+      <slot></slot>
     `
   }
 
