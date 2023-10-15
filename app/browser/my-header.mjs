@@ -1,3 +1,4 @@
+/* globals customElements */
 import CustomElement from '@enhance-labs/custom-element'
 
 export default class MyHeader extends CustomElement {
@@ -26,7 +27,9 @@ export default class MyHeader extends CustomElement {
         }
       </style>
       <h1>${heading}</h1>
+      <slot name="top"></slot>
       <slot></slot>
+      <slot name="bottom"></slot>
     `
   }
 
