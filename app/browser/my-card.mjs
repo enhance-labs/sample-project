@@ -19,6 +19,7 @@ export default class MyCard extends CustomElement {
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
+            color: black;
             background-color: #fff;
             background-clip: border-box;
             border: 1px solid rgba(0,0,0,.125);
