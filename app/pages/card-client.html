@@ -26,6 +26,8 @@
         let p = document.createElement('p');
         p.innerText = `Now in its 12th year, Web Unleashed is the ultimate conference for front-end web development professionals. We bring the community together, connecting like-minded individuals who share a passion for their work and for the industry.`
         let b = new MyCard()
+        let c = b.querySelector('span')
+        b.removeChild(c)
         b.setAttribute('title', 'Made with JS')
         b.prepend(img)
         b.querySelector('div').appendChild(p)
