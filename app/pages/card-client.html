@@ -6,5 +6,31 @@
 
 <main class="p0 card-container">
 </main>
+<button id="inner">Inner HTML</button>
+<button id="js">Made with JS</button>
+
+<script>
+    inner.addEventListener('click', () => {
+        let a = document.querySelector('main')
+        a.innerHTML = `<my-card title="Web Unleashed">
+        <img slot="image" src="/_public/webu23.png" />
+        <p>Now in its 12th year, Web Unleashed is the ultimate conference for front-end web development professionals. We bring the community together, connecting like-minded individuals who share a passion for their work and for the industry.</p>
+    </my-card>`
+    })
+
+    js.addEventListener('click', () => {
+        let a = document.querySelector('main')
+        let img = document.createElement('img');
+        img.slot = 'image'
+        img.src ='/_public/webu23.png';
+        let p = document.createElement('p');
+        p.innerText = `Now in its 12th year, Web Unleashed is the ultimate conference for front-end web development professionals. We bring the community together, connecting like-minded individuals who share a passion for their work and for the industry.`
+        let b = new MyCard()
+        b.setAttribute('title', 'Made with JS')
+        b.prepend(img)
+        b.querySelector('div').appendChild(p)
+        a.appendChild(b)
+    })
+</script>
 
 <script type="module" src="/_public/browser/test-page.mjs"></script>
