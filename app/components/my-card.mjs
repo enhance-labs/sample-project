@@ -62,6 +62,4 @@ export default class MyCard extends CustomElement {
   }
 }
 
-export const render = MyCard.prototype.render;
-
 customElements.define('my-card', MyCard)

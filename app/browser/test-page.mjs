@@ -1,5 +1,5 @@
-import MyHeader from './my-header.mjs'
-import MyCard from './my-card.mjs'
+import MyHeader from '../components/my-header.mjs'
+import MyCard from '../components/my-card.mjs'
 import SampleComponent from '@enhance-labs/sample-component'
 
 window.MyHeader = MyHeader

@@ -42,6 +42,4 @@ export default class MyHeader extends CustomElement {
   }
 }
 
-export const render = MyHeader.prototype.render;
-
 customElements.define('my-header', MyHeader)
